@@ -1,0 +1,51 @@
+dependencies {
+
+    // App
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity.ktx)
+    implementation(libs.androidx.fragment.ktx)
+    implementation(libs.chip.navigation.bar)
+
+    // View
+    implementation(libs.androidx.constraintlayout)
+    implementation(libs.androidx.cardview)
+    implementation(libs.androidx.core.splashscreen)
+    implementation(libs.circleimageview)
+    implementation(libs.glide)
+    implementation(libs.material)
+    implementation(libs.androidx.recyclerview)
+    implementation(libs.androidx.viewpager2)
+
+    // Data
+    implementation(libs.androidx.datastore.core)
+    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.kotlinx.coroutines.android)
+
+    // Network
+    implementation(libs.converter.gson)
+    implementation(libs.logging.interceptor)
+    implementation(libs.retrofit)
+
+    // Hilt
+    implementation(libs.hilt.android)
+    kapt(libs.hilt.android.compiler)
+
+    // Room
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
+    // Sql
+    implementation(libs.androidx.sqlite.ktx)
+
+    // Testing
+    testImplementation(libs.junit)
+    testImplementation(libs.mockito.kotlin)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+
+}

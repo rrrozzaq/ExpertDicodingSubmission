@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:menuCategory="container" android:visible="false">
+        <item android:id="@+id/home"
+            android:title="@string/home"
+            android:icon = "@drawable/ic_baseline_home_24"
+            app:cnb_iconColor= "#FF095D" />
+        <item android:id="@+id/favorite"
+            android:title="@string/favorite"
+            android:icon = "@drawable/ic_baseline_favorite_white"
+            app:cnb_iconColor= "#FF095D" />
+        <item android:id="@+id/setting"
+            android:title="@string/setting"
+            android:icon = "@drawable/ic_baseline_settings_24"
+            app:cnb_iconColor= "#FF095D"/>
+    </group>
+</menu>

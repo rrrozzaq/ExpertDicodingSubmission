@@ -1,0 +1,55 @@
+plugins {
+    alias(libs.plugins.android.application)
+    alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.dagger.hilt.android)
+    alias(libs.plugins.google.devtools.ksp)
+    alias(libs.plugins.org.jetbrains.kotlin.kapt)
+}
+
+apply from: "../shared_dependencies.gradle"
+
+android {
+    namespace 'com.rrrozzaq.expertdicodingawal'
+    compileSdk 34
+
+    defaultConfig {
+        applicationId "com.rrrozzaq.expertdicodingawal"
+        minSdk 23
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField("String", "KEY", '"${github_pat}"')
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+        }
+        debug {
+            minifyEnabled false
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_18
+        targetCompatibility JavaVersion.VERSION_18
+    }
+    kotlinOptions {
+        jvmTarget = '18'
+    }
+    kapt {
+        correctErrorTypes true
+        useBuildCache true
+    }
+    buildFeatures {
+        viewBinding true
+        buildConfig true
+    }
+    dynamicFeatures = [':favorite']
+}
+
+dependencies {
+    implementation(project(":core"))
+}
