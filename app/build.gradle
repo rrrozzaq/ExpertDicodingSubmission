@@ -33,11 +33,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_18
-        targetCompatibility JavaVersion.VERSION_18
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
     kotlinOptions {
-        jvmTarget = '18'
+        jvmTarget = '17'
     }
     kapt {
         correctErrorTypes true
@@ -48,6 +48,12 @@ android {
         buildConfig true
     }
     dynamicFeatures = [':favorite']
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
 }
 
 dependencies {
