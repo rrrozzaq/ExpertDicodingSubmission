@@ -1,1 +1,1 @@
-[![rrrozzaq](https://circleci.com/gh/rrrozzaq/ExpertDicodingSubmission.svg?style=svg)](https://app.circleci.com/pipelines/github/rrrozzaq/ExpertDicodingSubmission)
+[![CircleCI](https://circleci.com/gh/circleci/circleci-docs.svg?style=svg)](https://circleci.com/gh/rrrozzaq/ExpertDicodingSubmission)
