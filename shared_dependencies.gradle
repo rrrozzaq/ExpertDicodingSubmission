@@ -41,11 +41,13 @@ dependencies {
 
     // Sql
     implementation(libs.androidx.sqlite.ktx)
+    implementation(libs.net.zetetic.android.database.sqlcipher)
 
     // Testing
     testImplementation(libs.junit)
     testImplementation(libs.mockito.kotlin)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    debugImplementation(libs.leakcanary.android)
 
 }

@@ -30,6 +30,8 @@ sqliteKtx = "2.4.0"
 viewpager2 = "1.1.0"
 kapt = '1.9.10'
 chipnavbar = '1.4.0'
+leakcanaryAndroid = "2.14"
+netAndroidDatabaseSqlcipherVersion = "4.4.0"
 
 [libraries]
 androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
@@ -64,6 +66,8 @@ retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit
 hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
 hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
 chip-navigation-bar = { module = "com.github.ismaeldivita:chip-navigation-bar", version.ref = "chipnavbar" }
+leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version.ref = "leakcanaryAndroid" }
+net-zetetic-android-database-sqlcipher = { module = "net.zetetic:android-database-sqlcipher", version.ref = "netAndroidDatabaseSqlcipherVersion" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
