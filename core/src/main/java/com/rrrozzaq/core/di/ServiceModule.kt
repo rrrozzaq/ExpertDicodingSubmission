@@ -27,15 +27,15 @@ object ServiceModule {
             chain.proceed(requestHeader)
         }
 
-        val loggingInterceptor = if(de.hdodenhof.circleimageview.BuildConfig.DEBUG) {
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
-        } else {
-            HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.NONE)
-        }
-
+        val hostname = "api.github.com"
+        val certificatePinner = CertificatePinner.Builder()
+            .add(hostname, "sha256/GyhWVHsOXNZc6tGTNd15kXF9YD0kEZaGxYn6MUva5jY=")
+            .add(hostname, "sha256/Wec45nQiFwKvHtuHxSAMGkt19k+uPSw9JlEkxhvYPHk=")
+            .add(hostname, "sha256/lmo8/KPXoMsxI+J9hY+ibNm2r0IYChmOsF9BxD74PVc=")
+            .build()
         val client = OkHttpClient.Builder()
             .addInterceptor(authInterceptor)
-            .addInterceptor(loggingInterceptor)
+            .certificatePinner(certificatePinner)
             .build()
         val retrofit = Retrofit.Builder()
             .baseUrl("https://api.github.com/")
